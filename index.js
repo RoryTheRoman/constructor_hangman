@@ -19,6 +19,7 @@ inquirer
         if (inquirerResponse.intro){
             console.log ("Welcome to the game, " + inquirerResponse.username + " !");
             startGame();
+            gamePlay();
 
         };
     });
@@ -27,4 +28,8 @@ function startGame (){
     console.log("");
     console.log("Here's your First Word!")
     console.log("");
+}
+function gamePlay (){
+    var gameWord = new Word (Math.floor(Math.random() * playWords.length));
+    console.log(gameWord);
 }

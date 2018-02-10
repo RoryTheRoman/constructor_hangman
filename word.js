@@ -1,13 +1,13 @@
 var Letter = require("./letter.js");
 
-function Word (){
+function Word (playWords){
     var playWords = new Letter ([
         "whatthefuck", 
         "holyshit", 
         "whatamievendoing",
     ]);
     this.toString = function(){
-        var newPlayWord = this.PlayWords;
+        var newPlayWord = this.playWords;
         reveal();
         return;
     }
@@ -17,6 +17,7 @@ function Word (){
     }
         
     }
+
     
     module.exports = Word;
    
