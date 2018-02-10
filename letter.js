@@ -1,4 +1,4 @@
-function Letter (char){
+function Letter (char, guess){
     this.char = char;
     this.guess = false;
     this.reveal = function (){
@@ -11,6 +11,7 @@ function Letter (char){
     this.check = function (userInput){
         if(this.userInput === char){
             this.guess = true;
+            return;
         };       
     };
 };

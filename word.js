@@ -1,4 +1,4 @@
-var Letter = require("/.letter.js");
+var Letter = require("./letter.js");
 
 function Word (){
     var playWords = new Letter ([
