@@ -1,23 +1,25 @@
-function Letter (userInput){
-    this.char = "a";
-    this.guess = false;
+function Letter (char){
+    this.char = char;
+    this.shows = false;
     this.reveal = function (){
         if (this.char === userInput){
             console.log(this.char);
+            return this.char;
         }else{
             console.log("_");
+            return "_";
         };
     };
-    this.check = function (){
+    this.check = function (userInput){
         if(this.char === userInput){
-            this.guess = true;
+            this.shows = true;
             console.log(this.guess);
             return;
         };       
     };
 };
-var test = new Letter ("t");
-test.reveal();
-test.check();
-this.guess = true;
-module.exports = Letter;
+// var a = new Letter ("a");
+// var userInput = "b";
+
+// a.reveal();
+// a.check();

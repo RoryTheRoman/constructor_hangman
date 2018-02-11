@@ -1,11 +1,12 @@
 var Letter = require("./letter.js");
 
 function Word (playWords){
-    var playWords = new Letter ([
+    this.playWords = new Letter ([
         "whatthefuck", 
         "holyshit", 
         "whatamievendoing",
     ]);
+    console.log(playWords);    
     this.toString = function(){
         var newPlayWord = this.playWords;
         reveal();
