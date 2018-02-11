@@ -28,3 +28,5 @@ function Letter (char){
 // a.check();
 // a.check();
 // console.log(a.shows);
+
+module.exports = Letter;

@@ -2,20 +2,33 @@ var Letter = require("./letter.js");
 
 function Word (playWord){
     this.playWord = playWord;
-    this.charArr = new Letter ([]);
-    this.charString = function(){
-        for (let index = 0; index < this.playword.length; index++) {
-            this.charArr.push(whatamipushing);
-            
+    this.charArr = [];
+    this.charString = function(playWord){
+        for (var i = 0; i < this.playWord.length; i ++) {
+            var newChar = new Letter (this.playWord[i]);
+            this.charArr.push(newChar.toString());           
         }
+    }
+};
 
-    }
-    this.userGuess = function(userGuess){
-        check();
-        return;
-    }
+Word.prototype.toString = function (){
+    var stringy = this.playWord[i] + ",";
+}  
+
+var test = new Word ("DisWorking");
+console.log(test.playWord);
+console.log("---------");
+
+console.log(test.charArr);
+
+
+
+
+    // this.userGuess = function(userGuess){
+    //     check();
+    //     return;
+    // }
         
-    }
 
     
     module.exports = Word;
