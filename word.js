@@ -1,16 +1,14 @@
 var Letter = require("./letter.js");
 
-function Word (playWords){
-    this.playWords = new Letter ([
-        "whatthefuck", 
-        "holyshit", 
-        "whatamievendoing",
-    ]);
-    console.log(playWords);    
-    this.toString = function(){
-        var newPlayWord = this.playWords;
-        reveal();
-        return;
+function Word (playWord){
+    this.playWord = playWord;
+    this.charArr = new Letter ([]);
+    this.charString = function(){
+        for (let index = 0; index < this.playword.length; index++) {
+            this.charArr.push(whatamipushing);
+            
+        }
+
     }
     this.userGuess = function(userGuess){
         check();
