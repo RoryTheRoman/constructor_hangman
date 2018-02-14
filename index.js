@@ -1,6 +1,7 @@
 var Letter = require("./letter.js");
 var Word = require("./word.js");
 var inquirer = require("inquirer");
+var playWordArr = ["blue", "red", "black", "purple", "maroon"];
 
 inquirer
     .prompt([
@@ -30,6 +31,7 @@ function startGame (){
     console.log("");
 }
 function gamePlay (){
-    var gameWord = new Word (Math.floor(Math.random() * playWords.length));
-    console.log(gameWord);
+    var gameWord = new Word (Math.floor(Math.random() * playWordArr.length));
+    playWord = gameWord;
+    console.log(playWord);
 }

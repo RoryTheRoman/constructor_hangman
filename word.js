@@ -5,17 +5,19 @@ function Word (playWord){
     this.charArr = [];
     this.charString = function(){
         var newChar;
-        for (var i = 0; i < this.playWord.length; i ++) {
-            this.charArr.push(newChar.toString());           
-        }
-    }
+        for (var i = 0; i < playWord.length; i ++) {
+            newChar = newChar + charArr[i].reveal();
+        };
+        return newChar;
+    };
+    this.guess = function(charGuess) {
+        for (var i = 0; i < playWord.length; i ++) {
+            check();
+            reveal();
+        };
+        return;
+    };
 };
 
-
-
-
-        
-
-    
-    module.exports = Word;
+ module.exports = Word;
    
