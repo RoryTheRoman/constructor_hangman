@@ -4,7 +4,7 @@ function Word (playWord){
     this.playWord = playWord;
     this.charArr = [];
     this.charString = function(){
-        var newChar = "";
+        var newChar;
         for (var i = 0; i < this.playWord.length; i ++) {
             this.charArr.push(newChar.toString());           
         }
