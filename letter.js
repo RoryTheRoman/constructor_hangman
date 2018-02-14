@@ -14,19 +14,12 @@ function Letter (char){
     this.check = function (userInput){
         if(this.char === userInput){
             this.shows = true;
-            console.log(this.shows);
-            return;
-        };       
+            return true;
+        }else{
+            return false;
+        }      
     };
 };
-//DOES THIS HAVE TO BE A FOR LOOP?????^^^^^^^^^^^^^^^^^^^^
 
-// var a = new Letter ("a");
-// var userInput = "a";
-
-// a.reveal();
-// a.check();
-// a.check();
-// console.log(a.shows);
 
 module.exports = Letter;
