@@ -6,23 +6,26 @@ var playWordArr = ["blue", "red", "black", "purple", "maroon"];
 inquirer
     .prompt([
         {
-            name: "intro",
-            type: "confirm",
-            message: "Would you like to play a game of hangman?",
-        },
-        {
             name: "username",
             type: "input",
             message:  "What is your name?"
         },
+        {
+            name: "intro",
+            type: "confirm",
+            message: "Would you like to play a game of hangman?",
+        },
     ])
-    .then(function(inquirerResponse) {
-        if (inquirerResponse.intro){
-            console.log ("Welcome to the game, " + inquirerResponse.username + " !");
+    .then(function(inqResp) {
+        if (inqResp.intro){
+            console.log ("Welcome to the game, " + inqResp.username + " !");
             startGame();
             gamePlay();
 
-        };
+        }else{
+            console.log("Fine. See ya never, " + inqResp.username + " :/");
+            return;
+        }
     });
 
 function startGame (){
@@ -31,7 +34,6 @@ function startGame (){
     console.log("");
 }
 function gamePlay (){
-    var gameWord = new Word (Math.floor(Math.random() * playWordArr.length));
-    playWord = gameWord;
-    console.log(playWord);
+    var gameWord = playWordArr[Math.floor(Math.random() * playWordArr.length)];
+    console.log(gameWord);
 }
