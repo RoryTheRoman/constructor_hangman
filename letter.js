@@ -5,7 +5,7 @@ function Letter (char){
     //this is the function that will show either a _ or a letter for the gameword.
     this.reveal = function (){
         if (this.shows === false){
-            return "_";
+            return "_ ";
         }else{
             return this.char;
         };
@@ -16,6 +16,7 @@ function Letter (char){
             this.shows = true;
             return true;
         }else{
+            this.shows === false;
             return false;
         };     
     };

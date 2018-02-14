@@ -33,7 +33,26 @@ function startGame (){
     console.log("Here's your First Word!")
     console.log("");
 }
+var userInput;
 function gamePlay (){
-    var gameWord = playWordArr[Math.floor(Math.random() * playWordArr.length)];
+    var gameWord = new Word (playWordArr[Math.floor(Math.random() * playWordArr.length)]);
+    var guesses = 8;
     console.log(gameWord);
+    console.log(gameWord.charString());
+    inquirer
+    .prompt([
+        {
+            name: "guess",
+            type: "input",
+            message: "Guess a letter",
+
+        },
+
+    ])
+    .then(function(letRes){
+        var userInput = letRes.guess;
+        console.log(userInput);
+
+    })
+
 }
